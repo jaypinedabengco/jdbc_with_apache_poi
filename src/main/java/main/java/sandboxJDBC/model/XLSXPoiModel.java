@@ -20,6 +20,8 @@ public class XLSXPoiModel extends PoiModel{
 	private String Work_Component;
 	private String Course_Language;
 	private Double Duration_Weeks;
+	private String Tuition_Fee;
+	private String Non_Tuition_Fee;
 	private String Estimated_Total_Course_Cost;
 	private String State1;
 	private String Course_Locations1;
@@ -27,8 +29,13 @@ public class XLSXPoiModel extends PoiModel{
 	private String Course_Locations2;
 	private String State3;
 	private String Course_Locations3;
+	private String CRICOS_Provider_Code;
+	private String Institution_Trading_Name;
+	private String Institution_Name;
+	private String Institution_Type;
+	private String Website;
+	private String Institution_Postal_Address;
 
-	
 	public XLSXPoiModel(){}
 	
 	public XLSXPoiModel(Row row) throws IllegalArgumentException, IllegalAccessException{
@@ -42,7 +49,7 @@ public class XLSXPoiModel extends PoiModel{
 			t_field.set(this, this.getValue(row.getCell(x)));
 		}
 	}
-	
+
 	public Double getCourse_ID() {
 		return Course_ID;
 	}
@@ -155,12 +162,27 @@ public class XLSXPoiModel extends PoiModel{
 		Duration_Weeks = duration_Weeks;
 	}
 
+	public String getTuition_Fee() {
+		return Tuition_Fee;
+	}
+
+	public void setTuition_Fee(String tuition_Fee) {
+		Tuition_Fee = tuition_Fee;
+	}
+
+	public String getNon_Tuition_Fee() {
+		return Non_Tuition_Fee;
+	}
+
+	public void setNon_Tuition_Fee(String non_Tuition_Fee) {
+		Non_Tuition_Fee = non_Tuition_Fee;
+	}
+
 	public String getEstimated_Total_Course_Cost() {
 		return Estimated_Total_Course_Cost;
 	}
 
-	public void setEstimated_Total_Course_Cost(
-			String estimated_Total_Course_Cost) {
+	public void setEstimated_Total_Course_Cost(String estimated_Total_Course_Cost) {
 		Estimated_Total_Course_Cost = estimated_Total_Course_Cost;
 	}
 
@@ -259,12 +281,5 @@ public class XLSXPoiModel extends PoiModel{
 	public void setInstitution_Postal_Address(String institution_Postal_Address) {
 		Institution_Postal_Address = institution_Postal_Address;
 	}
-
-	private String CRICOS_Provider_Code;
-	private String Institution_Trading_Name;
-	private String Institution_Name;
-	private String Institution_Type;
-	private String Website;
-	private String Institution_Postal_Address;
-
+	
 }
